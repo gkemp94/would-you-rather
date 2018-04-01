@@ -3,7 +3,7 @@ interface VotingOption {
     text: string;
 }
 
-export interface Questions {
+export interface Question {
     id: string;
     author: string;
     timestamp: string;
