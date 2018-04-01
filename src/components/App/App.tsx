@@ -1,9 +1,17 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
+import { handleInitialData } from '../../actions/shared';
+import PollList from '../PollList/PollList';
 import './App.css';
 
 const logo = require('./logo.svg');
 
-class App extends React.Component {
+class App extends React.Component<any> { // TODO: Fix this issue...
+  
+  componentDidMount() {
+    this.props.dispatch(handleInitialData());
+  }
+
   render() {
     return (
       <div className="App">
@@ -14,9 +22,12 @@ class App extends React.Component {
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <PollList />
       </div>
     );
   }
 }
 
-export default App;
+export default connect()(App);
+
+// TODO: Fix Typescript Error
