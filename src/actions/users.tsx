@@ -6,5 +6,5 @@ export function recieveUsers(users: User[]) {
     return {
         type: RECEIVE_USERS,
         users,
-    }
+    };
 }

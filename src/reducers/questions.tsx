@@ -1,12 +1,12 @@
 import { RECEIVE_QUESTIONS } from '../actions/questions';
 
-export default function questions(state={},action: any) {
-    switch(action.type){
+export default function questions(state: any = {}, action: any) {
+    switch (action.type) {
         case RECEIVE_QUESTIONS:
             return {
                 ...state,
                 ...action.questions
-            }
+            };
         default: 
             return state;
     }

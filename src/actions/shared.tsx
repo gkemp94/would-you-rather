@@ -12,8 +12,8 @@ export function handleInitialData() {
                 dispatch(recieveUsers(users));
                 dispatch(recieveQuestions(questions));
                 dispatch(setAuthedUser(AUTHED_ID));
-            })
-    }
+            });
+    };
 }
 
 // TODO: Dispatch function? TS

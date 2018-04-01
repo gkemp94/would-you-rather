@@ -6,5 +6,5 @@ export function recieveQuestions(questions: Question[]) {
     return {
         type: RECEIVE_QUESTIONS,
         questions,
-    }
+    };
 }
