@@ -1,0 +1,27 @@
+.PollList {
+    width: 50%;
+    min-width: 300px;
+    margin: 10px auto;
+    text-align: left;
+}
+
+.question-card {
+    margin-bottom: 10px;
+}
+
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-footer p {
+    margin: 0px;
+}
+
+.question-footer .pt-icon-tick {
+    color: green;
+}
+
+.question-footer .pt-icon-cross {
+    color: red;
+}

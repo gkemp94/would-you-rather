@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { User } from '../../models/User';
 import './Navbar.css';
@@ -23,9 +24,9 @@ class Navbar extends React.Component<any, any> {
           <div className="pt-navbar-heading">Would You Rather...?</div>
         </div>
         <div className="pt-navbar-group pt-align-right">
-          <button className="pt-button pt-minimal pt-icon-home"/>
-          <button className="pt-button pt-minimal pt-icon-add">New Poll</button>
-          <button className="pt-button pt-minimal pt-icon-trending-up">Leaderboard</button>
+          <Link to="/" className="pt-button pt-minimal pt-icon-home"/>
+          <Link to="/add" className="pt-button pt-minimal pt-icon-add">New Poll</Link>
+          <Link to="/leaderboard" className="pt-button pt-minimal pt-icon-trending-up">Leaderboard</Link>
           <span className="pt-navbar-divider"/>
           <button className="pt-button pt-minimal" onClick={this.toggleDialog}>
             <img className="user-avatar" src={user.avatarURL}/>
