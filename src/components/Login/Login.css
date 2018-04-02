@@ -13,3 +13,7 @@
     font-size: .8em;
     opacity: .5;
 }
+
+.user-not-found {
+    color: red;
+}

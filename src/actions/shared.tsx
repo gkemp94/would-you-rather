@@ -1,9 +1,9 @@
 import { getInitialData } from '../utils/api';
 import { recieveUsers } from '../actions/users';
 import { recieveQuestions } from '../actions/questions';
-import { setAuthedUser } from '../actions/authedUser';
+// import { setAuthedUser } from '../actions/authedUser';
 
-const AUTHED_ID: string = 'sarahedo';
+// const AUTHED_ID: string = 'sarahedo';
 
 export function handleInitialData() {
     return (dispatch: any) => {
@@ -11,7 +11,7 @@ export function handleInitialData() {
             .then(({ users, questions }) => {
                 dispatch(recieveUsers(users));
                 dispatch(recieveQuestions(questions));
-                dispatch(setAuthedUser(AUTHED_ID));
+                // dispatch(setAuthedUser(AUTHED_ID));
             });
     };
 }

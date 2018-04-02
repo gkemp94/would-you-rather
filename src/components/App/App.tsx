@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { handleInitialData } from '../../actions/shared';
-import PollList from '../PollList/PollList';
+import Main from '../Main/Main';
 import Login from '../Login/Login';
 import './App.css';
 
@@ -23,7 +23,7 @@ class App extends React.Component<any, any> { // TODO: Fix this issue...
     let { loggedIn } = this.props;
     return (
       <div className="App">
-        {!loggedIn ? (<Login />) : (<PollList />)}
+        {!loggedIn ? (<Login />) : (<Main />)}
       </div>
     );
   }
