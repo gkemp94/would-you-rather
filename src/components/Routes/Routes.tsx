@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import PollList from '../PollList/PollList';
 import Leaderboard from '../Leaderboard/Leaderboard';
 import Add from '../Add/Add';
+import Poll from '../Poll/Poll';
 
 class Routes extends React.Component<any> {
   render() {
@@ -19,6 +20,12 @@ class Routes extends React.Component<any> {
               path="/leaderboard" 
               render={() => (
                 <Leaderboard />
+              )}
+            />
+            <Route
+              path="/question/:id" 
+              render={(props) => (
+                <Poll {...props}/>
               )}
             />
             <Route

@@ -1,0 +1,6 @@
+.question-card {
+    width: 90%;
+    min-width: 300px;
+    margin: 10px auto;
+    text-align: left;
+}
