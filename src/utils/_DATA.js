@@ -1,8 +1,8 @@
 let users = {
-    sarahedo: {
-      id: 'sarahedo',
-      name: 'Sarah Edo',
-      avatarURL: '',
+    blackbeard: {
+      id: 'blackbeard',
+      name: 'Blackbeard',
+      avatarURL: 'https://vignette.wikia.nocookie.net/pirates/images/9/9f/BlackbeardFountain.jpg/revision/latest?cb=20121116204419',
       answers: {
         "8xf0y6ziyjabvozdd253nd": 'optionOne',
         "6ni6ok3ym7mf1p33lnez": 'optionOne',
@@ -11,20 +11,20 @@ let users = {
       },
       questions: ['8xf0y6ziyjabvozdd253nd', 'am8ehyc8byjqgar0jgpub9']
     },
-    tylermcginnis: {
-      id: 'tylermcginnis',
-      name: 'Tyler McGinnis',
-      avatarURL: '',
+    davyjones: {
+      id: 'davyjones',
+      name:  'Davy Jones',
+      avatarURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tUpb-_mpm-XdnuS_7bJwujisHV5hZPVPDV08eTQ6NOjK8MyDQg',
       answers: {
         "vthrdm985a262al8qx3do": 'optionOne',
         "xj352vofupe1dqz9emx13r": 'optionTwo',
       },
       questions: ['loxhs1bqm25b708cmbf3g', 'vthrdm985a262al8qx3do'],
     },
-    johndoe: {
-      id: 'johndoe',
-      name: 'John Doe',
-      avatarURL: '',
+    barbossa: {
+      id: 'barbossa',
+      name: 'Captain Hector Barbossa',
+      avatarURL: 'https://vignette.wikia.nocookie.net/disney/images/2/2a/Hector_Barbosa.jpeg/revision/latest?cb=20151120173146',
       answers: {
         "xj352vofupe1dqz9emx13r": 'optionOne',
         "vthrdm985a262al8qx3do": 'optionTwo',
@@ -48,10 +48,10 @@ let users = {
   let questions = {
     "8xf0y6ziyjabvozdd253nd": {
       id: '8xf0y6ziyjabvozdd253nd',
-      author: 'sarahedo',
+      author: 'blackbeard',
       timestamp: 1467166872634,
       optionOne: {
-        votes: ['sarahedo'],
+        votes: ['blackbeard'],
         text: 'have horrible short term memory',
       },
       optionTwo: {
@@ -61,66 +61,66 @@ let users = {
     },
     "6ni6ok3ym7mf1p33lnez": {
       id: '6ni6ok3ym7mf1p33lnez',
-      author: 'johndoe',
+      author: 'barbossa',
       timestamp: 1468479767190,
       optionOne: {
         votes: [],
         text: 'become a superhero',
       },
       optionTwo: {
-        votes: ['johndoe', 'sarahedo'],
+        votes: ['barbossa', 'blackbeard'],
         text: 'become a supervillian'
       }
     },
     "am8ehyc8byjqgar0jgpub9": {
       id: 'am8ehyc8byjqgar0jgpub9',
-      author: 'sarahedo',
+      author: 'blackbeard',
       timestamp: 1488579767190,
       optionOne: {
         votes: [],
         text: 'be telekinetic',
       },
       optionTwo: {
-        votes: ['sarahedo'],
+        votes: ['blackbeard'],
         text: 'be telepathic'
       }
     },
     "loxhs1bqm25b708cmbf3g": {
       id: 'loxhs1bqm25b708cmbf3g',
-      author: 'tylermcginnis',
+      author: 'davyjones',
       timestamp: 1482579767190,
       optionOne: {
         votes: [],
         text: 'be a front-end developer',
       },
       optionTwo: {
-        votes: ['sarahedo'],
+        votes: ['blackbeard'],
         text: 'be a back-end developer'
       }
     },
     "vthrdm985a262al8qx3do": {
       id: 'vthrdm985a262al8qx3do',
-      author: 'tylermcginnis',
+      author: 'davyjones',
       timestamp: 1489579767190,
       optionOne: {
-        votes: ['tylermcginnis'],
+        votes: ['davyjones'],
         text: 'find $50 yourself',
       },
       optionTwo: {
-        votes: ['johndoe'],
+        votes: ['barbossa'],
         text: 'have your best friend find $500'
       }
     },
     "xj352vofupe1dqz9emx13r": {
       id: 'xj352vofupe1dqz9emx13r',
-      author: 'johndoe',
+      author: 'barbossa',
       timestamp: 1493579767190,
       optionOne: {
-        votes: ['johndoe'],
+        votes: ['barbossa'],
         text: 'write JavaScript',
       },
       optionTwo: {
-        votes: ['tylermcginnis'],
+        votes: ['davyjones'],
         text: 'write Swift'
       }
     },

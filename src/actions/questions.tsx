@@ -1,8 +1,9 @@
 import { Question } from '../models/Question';
-import { saveQuestionAnswer } from '../utils/api';
+import { saveQuestionAnswer, saveQuestion } from '../utils/api';
 
 export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS';
 export const ANSWER_QUESTION = 'ANSWER_QUESTION';
+export const SAVE_QUESTION = 'SAVE_QUESTION';
 
 export function recieveQuestions(questions: Question[]) {
     return {
@@ -23,4 +24,17 @@ export function answerQuestion(qid: string, authedUser: string, answer: string) 
                 });
             });
     };
+}
+
+export function askQuestion( optionOneText: string, optionTwoText: string, author: string) {
+    return (dispatch: any) => {
+        return saveQuestion({optionOneText, optionTwoText, author})
+            .then((res: any) => {
+                dispatch({
+                    type: SAVE_QUESTION,
+                    info: res
+                });
+            });
+    };
+
 }

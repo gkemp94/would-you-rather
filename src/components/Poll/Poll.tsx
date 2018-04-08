@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { User } from '../../models/User';
+import { Link } from 'react-router-dom';
 import { Question } from '../../models/Question';
 import { Card, Elevation, Button } from '@blueprintjs/core';
 import { answerQuestion } from '../../actions/questions';
@@ -21,13 +22,21 @@ class Poll extends React.Component<any> {
     render() {
         let pollId = this.props.match.params.id;
         let poll: Question = this.props.questions[pollId];
+        if (!poll) {
+         return (
+             <div className="404">
+             <h2>404 Error...This question doesn't seem to exist...</h2>
+             <h3> How about you go<Link to="/add"> ask it?</Link> </h3>
+             </div>
+         );   
+        }
         let optOneVotes: number = poll.optionOne.votes.length;
         let optTwoVotes: number = poll.optionTwo.votes.length;
         let totalVotes: number = optOneVotes + optTwoVotes;
         let optOnePercent: string = optOneVotes / totalVotes * 100 + '%';
         let optTwoPercent: string = optTwoVotes / totalVotes * 100 + '%';
         let answer: string = this.props.users[this.props.authedUser].answers[pollId];
-
+        let author: User = this.props.users[poll.author]; 
         return (
             <div className="Poll">
                     <Card 
@@ -39,7 +48,8 @@ class Poll extends React.Component<any> {
                             {poll.optionOne.text} or&nbsp; 
                             {poll.optionTwo.text}? 
                         </h5>
-                        <p className="muted"> 
+                        <p> 
+                            <img className="user-avatar" src={author.avatarURL}/> 
                             Asked by {poll.author} on {formatDate(poll.timestamp)} 
                         </p>
                         {answer && (
