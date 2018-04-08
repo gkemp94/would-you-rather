@@ -12,7 +12,6 @@ interface MappedState {
 
 class Leaderboard extends React.Component<any, any> {
   render() {
-    // let users: any = this.props.users;
     let users = Object.keys(this.props.users).map((key) => this.props.users[key])
                   .sort((b, a) => (Object.keys(a.answers).length + a.questions.length) - 
                     (Object.keys(b.answers).length + b.questions.length));

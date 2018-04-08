@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Redirect } from 'react-router';
 import { connect } from 'react-redux';
 import { askQuestion } from '../../actions/questions';
 
@@ -11,7 +12,8 @@ interface MappedState {
 class Add extends React.Component<any, any> {
   state = {
     optionOne: '',
-    optionTwo: ''
+    optionTwo: '',
+    fireRedirect: false,
   };
 
   handleSubmit(e: React.MouseEvent<HTMLFormElement>) {
@@ -21,12 +23,13 @@ class Add extends React.Component<any, any> {
     this.props.dispatch(askQuestion(optionOne, optionTwo, authedUser));
     this.setState({
       optionOne: '',
-      optionTwo: ''
+      optionTwo: '',
+      fireRedirect: true,
     });
   }
 
   render() {
-    let {optionOne, optionTwo} = this.state;
+    let {optionOne, optionTwo, fireRedirect} = this.state;
     return (
       <div className="Add">
         <h3> Ask Another Question </h3>
@@ -63,6 +66,9 @@ class Add extends React.Component<any, any> {
           Ask! 
           </button>
         </form>
+        {fireRedirect && (
+          <Redirect to="/"/>
+        )}
       </div>
     );
   }
