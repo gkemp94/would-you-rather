@@ -21,9 +21,9 @@ class Leaderboard extends React.Component<any, any> {
         {users.map((user, index) => (
           <div key={user.id} className="leaderboard-item">
             <h4>{index + 1}.  <img className="user-avatar" src={user.avatarURL}/> {user.name}</h4>
-            <h6>Asked: {Object.keys(user.answers).length} </h6>
-            <h6>Answered: {user.questions.length} </h6>
-            <h6> Total: {Object.keys(user.answers).length + user.questions.length} </h6>
+            <h6>Answered: {Object.keys(user.answers).length} </h6>
+            <h6>Asked: {user.questions.length} </h6>
+            <h6>Total: {Object.keys(user.answers).length + user.questions.length} </h6>
           </div>
         ))} 
       </div>
